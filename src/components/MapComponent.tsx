@@ -2,10 +2,11 @@
 import React from "react";
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import type { LatLng } from "../functions/getCurrentPosition";
+import MapHeader from "./MapHeader";
 
 const containerStyle = {
   width: "100%",
-  height: "500px",
+  height: "100vh",
 };
 
 // 初期値は東京
@@ -28,9 +29,12 @@ const MapComponent: React.FC<LatLng> = ({ lat, lng }) => {
   if (!isLoaded) return <div>読み込み中...</div>;
 
   return (
-    <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
-      {/* マーカーなど追加したい場合はここに */}
-    </GoogleMap>
+    <>
+      <MapHeader />
+      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
+        {/* マーカーなど追加したい場合はここに */}
+      </GoogleMap>
+    </>
   );
 };
 
