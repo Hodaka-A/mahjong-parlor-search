@@ -1,14 +1,14 @@
-
+import MapComponent from './components/MapComponent'
 import './App.css'
 
-function App() {
+
+export function App() {
 
 
   return (
     <>
-      
+      <h1>Google Maps 表示サンプル</h1>
+      <MapComponent/>
     </>
   )
 }
-
-export default App
