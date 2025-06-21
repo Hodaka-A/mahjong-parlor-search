@@ -1,11 +1,11 @@
 export type LatLng = {
-  lat: number;
-  lng: number;
+  lat?: number | null;
+  lng?: number | null;
 };
 
 export const getCurrentLocation = (): Promise<LatLng> => {
   return new Promise((resolve, reject) => {
-    const success = (pos)=> {
+    const success = (pos) => {
       const lat = pos.coords.latitude;
       const lng = pos.coords.longitude;
       resolve({ lat, lng });
