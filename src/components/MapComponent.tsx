@@ -14,7 +14,7 @@ const center = {
 
 const MapComponent: React.FC = () => {
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey: 'AIzaSyACptXWgSYOvhTN9JVAQkWjQQpbWo0Hsh4', // ここにAPIキーを貼る
+        googleMapsApiKey: import.meta.env.VITE_GOOGLEMAP_API_KEY, // ここにAPIキーを貼る
     });
 
     if (loadError) return <div>地図の読み込みに失敗しました</div>;
