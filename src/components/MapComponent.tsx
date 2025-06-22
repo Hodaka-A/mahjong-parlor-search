@@ -1,6 +1,6 @@
 // src/components/MapComponent.tsx
 import React from "react";
-import { GoogleMap, useLoadScript } from "@react-google-maps/api";
+import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
 import type { LatLng } from "../functions/getCurrentPosition";
 import MapHeader from "./MapHeader";
 
@@ -33,6 +33,7 @@ const MapComponent: React.FC<LatLng> = ({ lat, lng }) => {
       <MapHeader />
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
         {/* マーカーなど追加したい場合はここに */}
+        <Marker position={center} />
       </GoogleMap>
     </>
   );
