@@ -30,7 +30,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/home" element={<Home />} />
-          <Route path="search" element={<MapComponent {...location} />} />
+          <Route path="/search" element={<MapComponent {...location} />} />
         </Routes>
       </BrowserRouter>
     </>
