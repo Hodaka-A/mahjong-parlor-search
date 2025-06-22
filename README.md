@@ -52,3 +52,4 @@ export default tseslint.config({
   },
 })
 ```
+# mahjong-parlor-search
